@@ -1,0 +1,55 @@
+---
+title: "Project Proposal"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## 1. code to read data
+<br /> We are using the API to download the data. First, we download the kaggle in Linux and use this code to download the dataset.
+pip install kaggle
+```{r}
+#kaggle datasets download -d danilpan/yellow-new-york-taxi
+```
+
+
+```{r}
+YellowText = read.csv("/Users/yi/Desktop/MyRCode/yellow_tripdata_2010-12.csv")
+head(YellowText)
+```
+## 2. Descriptions of the variables
+
+```{r}
+sample_ID = sample(c(1:dim(YellowText)[1]), 1000000)
+YellowText_sample =  YellowText[sample_ID,]
+```
+<br />There are 18 variables in total in the Yellow New York Taxi dataset. We will use four of them including number of passengers, total distance as the prediction variables to predict the desired outcome variable tip amount
+<br />
+<br />Passenger_Count: Number of passengers in the trip.
+<br />Trip_Distance: The total distance of the trip in miles.
+<br />Payment_Type: The payment method passengers choose to pay.
+<br />Fare_Amt: Amount of taxi fare of the trip
+<br />Tip_Amt: Amount of tip of the trip
+```{r}
+par(mfrow = c(3,2))
+hist(YellowText_sample$tip_amount, main = "The Histogram of Tips", xlab = "Tip Amount")
+hist(YellowText_sample$fare_amount, main = "The Price for the Trip", xlab = "Fare Amount")
+hist(YellowText_sample$passenger_count, main = "The Number of Passagers", xlab = "Passagers Number")
+barplot(table(YellowText_sample$payment_type), main = "The Histogram of Payment Method", xlab = "Payment Method")
+hist(YellowText_sample$trip_distance, main = "The Distance of the Trip", xlab = "Trip Distance")
+```
+
+## 3. Statistical Methods ##
+<br />Huber loss regression function. we are applying the huber loss function to construct the statistics model similar to Multiple Linear Regression but more accurate while we can just lower the impact of the outliers to our statistical model. 
+
+## 4. computational steps you will use ##
+<br />First, collect data and clean data. The taxi data is between 2009 and 2012. Each year has 12 months of data. We will combine the same year data, and extract columns Passenger_Count, Trip_Distance, Payment_Type, Fare_Amt and Tip_Amt. Then collect yearly data into a single file. There will be 2009, 2010, 2011, 2012 and overall data. 
+
+<br />Second, build the multiple linear regression model. Tip_Amt is a dependent variable. Passenger_Count, Trip_Distance, Payment_Type and Fare_Amt are explanatory variables.
+
+## 5. Link to Github repository
+<br />https://github.com/YiM2001/Stat479FinalProject
+
+
