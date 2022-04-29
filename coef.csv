@@ -1,0 +1,9 @@
+"","model.coefficients"
+"(Intercept)",-0.166602836152631
+"Passenger_count",-0.0149650553445743
+"Trip_Distance",-0.0246196683861786
+"Fare_Amt",0.0821823643264725
+"Spring",-0.0172042240199577
+"Summer",0.0286520911064295
+"Fall",0.0668670498877734
+"Winter",NA
