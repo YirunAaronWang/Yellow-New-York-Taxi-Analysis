@@ -1,0 +1,9 @@
+Group Members
+NetID,LastName,FirstName 
+dxu94,Xu,Dexin
+wang2683,Wang,Yirun
+yma329,Ma,Yi
+yren58, Ren, Richard
+
+Dataset link
+https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page
