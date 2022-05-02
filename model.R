@@ -9,7 +9,8 @@ model = lm(Tip_Amt ~ Passenger_count +
                      Spring +
                      Summer +
                      Fall +
-                     Winter, data = new_data)
+                     Winter +
+                     Payment_type, data = new_data)
 
 coef = data.frame(model$coefficients)
 
