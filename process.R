@@ -31,5 +31,6 @@ new_data = data.frame("Passenger_count" = data[[4]],
 
 new_data$Payment_type = toupper(new_data$Payment_type)
 new_data = new_data[new_data$Payment_type!= "NO CHARGE",]
+new_data = new_data[-c(which(new_data$Payment_type == "DISPUTE")),]
 
 write.csv(new_data, args[1])
