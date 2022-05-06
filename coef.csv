@@ -1,8 +1,0 @@
-"","model.coefficients"
-"(Intercept)",-0.537708489706079
-"Passenger_count",0.00184064337898867
-"Fare_Amt",0.0573611604819051
-"Payment_typeCREDIT",2.04334671737203
-"SeasonSpring",0.00223388528604579
-"SeasonSummer",-0.000212813204097871
-"SeasonWinter",0.0112100580652152
