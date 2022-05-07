@@ -6,4 +6,6 @@ res <- cor(trip)
 res_ = round(res, 5)
 install.packages("corrplot")
 library(corrplot)
-corrplot(res, type = "upper", order = "hclust", tl.col = "black", tl.srt = 45, tl.cex = 0.6, addCoef.col = 1, number.cex = 0.5, title = "Correlation Matrix")
+corrplot(res, type = "upper", order = "hclust", tl.col = "black", tl.srt = 45, tl.cex = 0.6, addCoef.col = 1, number.cex = 0.6, title = "Correlation Matrix", col=colorRampPalette(c("indianred2","white","dodgerblue"))(50))
+
+         
