@@ -1,4 +1,4 @@
-# Stat479FinalProject
+# Yellow New York Raxi Analysis
 <br /> Process.R/.sh/.sub: to clear data we use and add variables we want.
 <br /> merge.sh: combine the output data from the process.sub together.
 <br /> Model.R/.sh/.sub : to build the multiple linear regression model based on processed data and output coefficient CSV.
